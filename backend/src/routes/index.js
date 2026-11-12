@@ -4,5 +4,6 @@ router.get('/health', (req, res) => res.json({ status: 'ok' }));
 router.use('/auth', require('./authRoutes'));
 router.use('/vehicles', require('./vehicleRoutes'));
 router.use('/dashboard', require('./dashboardRoutes'));
+router.use('/rentals', require('./rentalRoutes'));
 
 module.exports = router;

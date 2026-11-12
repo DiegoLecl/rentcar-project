@@ -1,0 +1,14 @@
+@baseUrl = http://localhost:3001/api
+@token = COLE_O_TOKEN_DO_CLIENTE
+
+POST {{baseUrl}}/rentals
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{ "vehicleId": 1, "startDate": "2026-11-12", "expectedReturnDate": "2026-11-15" }
+
+GET {{baseUrl}}/rentals
+Authorization: Bearer {{token}}
+
+PATCH {{baseUrl}}/rentals/1/return
+Authorization: Bearer {{token}}
