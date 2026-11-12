@@ -1,0 +1,20 @@
+@baseUrl = http://localhost:3001/api
+@token = COLE_O_TOKEN_DO_ADMIN
+
+GET {{baseUrl}}/vehicles
+Authorization: Bearer {{token}}
+
+POST {{baseUrl}}/vehicles
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{ "brand": "Chevrolet", "model": "Onix", "year": 2022, "plate": "MNO5P67", "color": "Azul", "dailyRate": 100 }
+
+PUT {{baseUrl}}/vehicles/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{ "brand": "Toyota", "model": "Corolla", "year": 2022, "plate": "ABC1D23", "color": "Prata", "dailyRate": 155 }
+
+DELETE {{baseUrl}}/vehicles/5
+Authorization: Bearer {{token}}
