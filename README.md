@@ -95,6 +95,16 @@ npm install
 cp .env.example .env
 ```
 
+Edite o `.env` com a sua conexão e um `JWT_SECRET` próprio:
+
+```
+DATABASE_URL="mysql://USUARIO:SENHA@localhost:3306/rentcar"
+JWT_SECRET="um-segredo-longo-e-aleatorio"
+JWT_EXPIRES_IN="1d"
+PORT=3001
+CORS_ORIGIN="http://localhost:5173"
+```
+
 Migrações e dados iniciais:
 
 ```bash
@@ -122,10 +132,12 @@ Acesse http://localhost:5173. O Vite encaminha `/api` para o backend na porta 30
 
 ## Credenciais de demonstração
 
-Criadas pelo `npm run seed`:
+Criadas pelo `npm run seed` (somente para demonstração; mude no `.env` se quiser):
 
 - Administrador: `admin@rentcar.com` / `admin123`
 - Clientes: cadastre pela tela de cadastro
+
+O seed também cria 4 veículos de exemplo.
 
 ## Rotas da API
 
